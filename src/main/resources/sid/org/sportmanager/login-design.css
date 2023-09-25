@@ -1,0 +1,16 @@
+.gradient{
+  -fx-background-color: linear-gradient(to bottom right ,#0f6789,#286155);
+}
+
+.left-form{
+-fx-background-color:#fff;
+}
+.header-label{
+  -fx-border-color: #286155;
+  -fx-border-width: 0 0 0 3px;
+  -fx-pading : 0 0 0 5px;
+
+
+.reponse{
+   -fx-font-size:16px;
+}

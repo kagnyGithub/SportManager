@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sid.org.sportmanager.LoginController">
+   <children>
+      <AnchorPane fx:id="si_loginForm" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane layoutY="92.0" prefHeight="407.0" prefWidth="300.0" styleClass="gradient">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="260.0" layoutX="20.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/login-image.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@login-design.css" />
+                  <URL value="@login-design.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane prefHeight="98.0" prefWidth="600.0" style="-fx-background-color: #16A085;">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="140.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="301.0" layoutY="92.0" prefHeight="407.0" prefWidth="300.0" stylesheets="@login-design.css">
+               <children>
+                  <PasswordField fx:id="si_password" layoutX="31.0" layoutY="191.0" prefHeight="30.0" prefWidth="220.0" promptText="Password">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></PasswordField>
+                  <Label layoutX="31.0" layoutY="48.0" prefHeight="46.0" prefWidth="230.0" styleClass="header-label" stylesheets="@login-design.css" text="LOGIN" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="si_loginBtn" layoutX="27.0" layoutY="277.0" mnemonicParsing="false" onAction="#signInBottomLogin" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #16A085;" text="LOGIN">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="si_forgot" layoutX="31.0" layoutY="239.0" onAction="#switchForgotPassword" text="Forgot Password ?" />
+                  <TextField fx:id="si_username" layoutX="31.0" layoutY="134.0" prefHeight="30.0" prefWidth="220.0" promptText="Username">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font></TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="fg_loginForm" layoutX="10.0" layoutY="5.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <AnchorPane layoutY="92.0" prefHeight="407.0" prefWidth="300.0" styleClass="gradient">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="260.0" layoutX="20.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/login-image.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@login-design.css" />
+                  <URL value="@login-design.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane prefHeight="96.0" prefWidth="601.0" style="-fx-background-color: blue;">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="140.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" layoutY="96.0" prefHeight="407.0" prefWidth="300.0" stylesheets="@login-design.css">
+               <children>
+                  <Label layoutX="31.0" layoutY="48.0" prefHeight="46.0" prefWidth="230.0" styleClass="header-label" stylesheets="@login-design.css" text="FORGOT PASSWORD" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="fp_proceedBtn" layoutX="21.0" layoutY="273.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #7e0af2; -fx-background-radius: 12px;" text="Proceed">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="fp_reponse" layoutX="21.0" layoutY="217.0" prefHeight="30.0" prefWidth="220.0" promptText="reponse">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="fp_question" layoutX="21.0" layoutY="167.0" prefHeight="30.0" prefWidth="220.0" promptText="question" />
+                  <Button fx:id="fp_retourBtn" layoutX="65.0" layoutY="355.0" mnemonicParsing="false" onAction="#questionButtomRetour" prefHeight="30.0" prefWidth="106.0" text="Retour">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="fp_username" layoutX="21.0" layoutY="119.0" prefHeight="30.0" prefWidth="220.0" promptText="username">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="np_loginForm" layoutX="10.0" layoutY="5.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <AnchorPane layoutY="92.0" prefHeight="407.0" prefWidth="300.0" styleClass="gradient">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="260.0" layoutX="20.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/login-image.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+               <stylesheets>
+                  <URL value="@login-design.css" />
+                  <URL value="@login-design.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane prefHeight="96.0" prefWidth="601.0" style="-fx-background-color: blue;">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="140.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="307.0" layoutY="92.0" prefHeight="407.0" prefWidth="300.0" stylesheets="@login-design.css">
+               <children>
+                  <Label layoutX="31.0" layoutY="48.0" prefHeight="46.0" prefWidth="230.0" styleClass="header-label" stylesheets="@login-design.css" text="FORGOT PASSWORD" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="np_changePasswordBtn" layoutX="31.0" layoutY="223.0" mnemonicParsing="false" onAction="#changePassButtom" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #7e0af2; -fx-background-radius: 12px;" text="Change Password">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fg_retour_changeBtn" layoutX="88.0" layoutY="351.0" mnemonicParsing="false" onAction="#retourButtom" prefHeight="30.0" prefWidth="106.0" text="Retour">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="np_password" layoutX="31.0" layoutY="115.0" prefHeight="30.0" prefWidth="220.0" promptText="New Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="np_passworConfirm" layoutX="31.0" layoutY="174.0" prefHeight="30.0" prefWidth="220.0" promptText="Conformation Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
